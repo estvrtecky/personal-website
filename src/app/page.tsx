@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import Section from "@/components/ui/Section";
 import {
   FaChevronRight,
   FaGithub,
@@ -10,10 +8,13 @@ import {
   FaRegEnvelopeOpen,
 } from "react-icons/fa6";
 
+import Section from "@/components/ui/Section";
+import Card from "@/components/ui/Card";
+
 export default function Home() {
   return (
     <main>
-      <Section className="relative overflow-hidden justify-center min-h-dvh mt-[-64.8px] mb-0">
+      <Section className="relative overflow-hidden justify-center min-h-dvh mt-[-64.8px] border-b border-(--border)">
         <div className="absolute z-0 inset-0 flex items-end justify-end">
           <div className="absolute z-1 -right-16 -bottom-8 w-96 h-96 rounded-full bg-green-100 dark:bg-green-950"></div>
           <div className="absolute z-2 inset-0 backdrop-blur-[128px]"></div>
@@ -128,6 +129,85 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </Section>
+      <Section>
+        <Card className="px-6 py-8 hover:shadow dark:shadow-neutral-800 transition duration-300">
+          <h2 className="mb-8 font-heading font-bold text-4xl">
+            Education & Skills
+          </h2>
+          <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-16">
+            <ul>
+              <li className="flex">
+                <div className="relative flex flex-col items-center w-2 ml-6 mr-8">
+                  <div className="w-px grow bg-green-200 dark:bg-green-950"></div>
+                  <div className="absolute top-1/2 w-2 h-2 rounded-full bg-green-500 -translate-y-1/2"></div>
+                </div>
+                <div className="py-3">
+                  <h3 className="mb-1 font-heading font-medium text-xl">
+                    Brno University of Technology
+                  </h3>
+                  <div className="divide-x divide-(--border) text-xs text-fg-muted">
+                    <span className="pr-2">Computer Science</span>
+                    <span className="pl-2 font-mono">2025 - Present</span>
+                  </div>
+                </div>
+              </li>
+              <li className="flex">
+                <div className="relative flex flex-col items-center w-2 ml-6 mr-8">
+                  <div className="w-px grow bg-green-200 dark:bg-green-950"></div>
+                  <div className="absolute top-1/2 w-2 h-2 rounded-full bg-green-500 -translate-y-1/2"></div>
+                </div>
+                <div className="py-3">
+                  <h3 className="mb-1 font-heading font-medium text-xl">
+                    SPŠE Zochova
+                  </h3>
+                  <div className="divide-x divide-(--border) text-xs text-fg-muted">
+                    <span className="pr-2">
+                      Programming of Digital Technologies
+                    </span>
+                    <span className="pl-2 font-mono">2021 - 2025</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div className="mr-6">
+              <h3 className="my-3 font-heading font-medium text-xl">
+                Programming languages
+              </h3>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  TypeScript
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Python
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  C
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Assembly
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  SQL
+                </span>
+              </div>
+              <h3 className="my-3 font-heading font-medium text-xl">
+                Web frameworks
+              </h3>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Next.js
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  React
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Tailwind
+                </span>
+              </div>
+            </div>
+          </div>
+        </Card>
       </Section>
     </main>
   );
