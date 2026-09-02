@@ -2,6 +2,9 @@
 
 :root {
   /* Primitives */
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+
   --white: hsl(0, 0%, 100%);
   --neutral-50: hsl(0, 0%, 98%);
   --neutral-100: hsl(0, 0%, 96%);

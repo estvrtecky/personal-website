@@ -13,7 +13,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <Section className="relative overflow-hidden justify-center min-h-dvh mb-0">
+      <Section className="relative overflow-hidden justify-center min-h-dvh mt-[-64.8px] mb-0">
         <div className="absolute z-0 inset-0 flex items-end justify-end">
           <div className="absolute z-1 -right-16 -bottom-8 w-96 h-96 rounded-full bg-green-100 dark:bg-green-950"></div>
           <div className="absolute z-2 inset-0 backdrop-blur-[128px]"></div>
