@@ -131,6 +131,52 @@ export default function Home() {
         </div>
       </Section>
       <Section>
+        <h2 className="mb-8 font-heading font-bold text-4xl">My Experience</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-7xl">
+          <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
+            <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
+              Frontend Engineering
+            </h3>
+            <p className="text-fg-muted text-sm">
+              I have experience creating simple websites and with UX/UI design.
+              I am currently working on a personal website to showcase my
+              projects.
+            </p>
+          </Card>
+          <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
+            <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
+              Graphic Design
+            </h3>
+            <p className="text-fg-muted text-sm">
+              As a member of a youth organization, I was responsible for
+              creating social media posts and preparing graphic materials for
+              events. I also designed a logo for them.
+            </p>
+          </Card>
+          <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
+            <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
+              Aspiring Developer
+            </h3>
+            <p className="text-fg-muted text-sm">
+              I enjoy exploring various areas of computer science, from Python
+              scripting and automation to artificial intelligence. I like
+              learning by experimenting and working on different projects to
+              understand how things actually work.
+            </p>
+          </Card>
+          <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
+            <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
+              Teamwork
+            </h3>
+            <p className="text-fg-muted text-sm">
+              I frequently collaborate with classmates on various team projects
+              at school. I have experience collaborating on GitHub and have also
+              tried Jira.
+            </p>
+          </Card>
+        </div>
+      </Section>
+      <Section>
         <Card className="px-6 py-8 hover:shadow dark:shadow-neutral-800 transition duration-300">
           <h2 className="mb-8 font-heading font-bold text-4xl">
             Education & Skills
