@@ -20,8 +20,8 @@ export default function Navbar() {
   return (
     <header className="sticky z-(--z-sticky) top-0">
       <nav
-        className={`${isScrolled ? "border-white/25 bg-white/25 dark:bg-black/25 backdrop-blur-lg" : "border-transparent"} border-b transition duration-300`}>
-        <div className="flex items-center justify-between max-w-7xl mx-auto p-4 md:px-8">
+        className={`${isScrolled ? "border-white/25 bg-white/25 dark:bg-black/25 backdrop-blur-lg" : "border-transparent"} p-4 md:px-8 border-b transition duration-300`}>
+        <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link
             href="/"
             className="font-mono">
