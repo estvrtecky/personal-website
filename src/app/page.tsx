@@ -205,6 +205,21 @@ export default function Home() {
                   Tailwind
                 </span>
               </div>
+              <h3 className="my-3 font-heading font-medium text-xl">Design</h3>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Figma
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Photoshop
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  Illustrator
+                </span>
+                <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
+                  InDesign
+                </span>
+              </div>
             </div>
           </div>
         </Card>
