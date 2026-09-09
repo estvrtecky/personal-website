@@ -9,8 +9,13 @@ import {
   FaRegEnvelopeOpen,
 } from "react-icons/fa6";
 
+import { routing } from "@/i18n/routing";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default function Home() {
   const t = useTranslations("home");
