@@ -1,1 +1,63 @@
-{}
+{
+  "common": {
+    "present": "Present",
+    "navbar": {
+      "cta": "Get in touch"
+    },
+    "footer": {
+      "signature": "Designed and built with love."
+    }
+  },
+  "home": {
+    "hero": {
+      "status": "Looking for new experiences",
+      "about": "I'm a computer science student based in Brno, with a growing focus on web development and design.",
+      "cta": "Get in touch",
+      "widgets": {
+        "photo": "Picture of me",
+        "role": "Computer science student",
+        "resume": {
+          "title": "Resumé",
+          "description": "See and download my resumé."
+        }
+      }
+    },
+    "experience": {
+      "title": "My Experience",
+      "frontendEngineering": {
+        "title": "Frontend Engineering",
+        "description": "I have experience creating simple websites and with UX/UI design. I am currently working on a personal website to showcase my projects."
+      },
+      "graphicDesign": {
+        "title": "Graphic Design",
+        "description": "As a member of a youth organization, I was responsible for creating social media posts and preparing graphic materials for events. I also designed a logo for them."
+      },
+      "aspiringDeveloper": {
+        "title": "Aspiring Developer",
+        "description": "I enjoy exploring various areas of computer science, from Python scripting and automation to artificial intelligence. I like learning by experimenting and working on different projects to understand how things actually work."
+      },
+      "teamwork": {
+        "title": "Teamwork",
+        "description": "I frequently collaborate with classmates on various team projects at school. I have experience collaborating on GitHub and have also tried Jira."
+      }
+    },
+    "education": {
+      "title": "Education & Skills",
+      "schools": {
+        "university": {
+          "title": "Brno University of Technology",
+          "fieldOfStudy": "Computer Science"
+        },
+        "highschool": {
+          "title": "SPŠE Zochova",
+          "fieldOfStudy": "Programming of Digital Technologies"
+        }
+      },
+      "skills": {
+        "programmingLanguages": "Programming languages",
+        "webFrameworks": "Web frameworks",
+        "design": "Design"
+      }
+    }
+  }
+}

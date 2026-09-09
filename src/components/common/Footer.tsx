@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   FaGithub,
   FaInstagram,
@@ -7,6 +8,8 @@ import {
 } from "react-icons/fa6";
 
 export default function Footer() {
+  const t = useTranslations("common.footer");
+
   // Copyright year
   const startYear = 2026;
   const currentYear = new Date().getFullYear();
@@ -57,7 +60,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col sm:flex-row justify-between gap-1 pt-6 sm:pt-4 border-t border-(--border) font-mono text-xs text-center text-fg-muted">
           <p>&copy; {displayYear} Erik Štvrtecký</p>
-          <p>Designed and built with love.</p>
+          <p>{t("signature")}</p>
         </div>
       </div>
     </footer>
