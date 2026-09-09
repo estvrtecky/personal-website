@@ -1,7 +1,7 @@
 import "../globals.css";
 
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, useLocale } from "next-intl";
 
 import { geistMono, inter, satoshi } from "@/app/fonts/fonts";
 import Navbar from "@/components/common/Navbar";
@@ -17,9 +17,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
+  const locale = useLocale();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistMono.variable} ${inter.variable} ${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
