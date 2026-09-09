@@ -1,6 +1,7 @@
-import "./globals.css";
+import "../globals.css";
 
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
 
 import { geistMono, inter, satoshi } from "@/app/fonts/fonts";
 import Navbar from "@/components/common/Navbar";
@@ -15,15 +16,17 @@ export const metadata: Metadata = {
     "Computer science student based in Brno, with a growing focus on web development and design.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
   return (
     <html
       lang="en"
       className={`${geistMono.variable} ${inter.variable} ${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
