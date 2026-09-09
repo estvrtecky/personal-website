@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   FaChevronRight,
   FaGithub,
@@ -8,10 +9,18 @@ import {
   FaRegEnvelopeOpen,
 } from "react-icons/fa6";
 
+import { routing } from "@/i18n/routing";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default function Home() {
+  const t = useTranslations("home");
+  const tCommon = useTranslations("common");
+
   return (
     <main>
       <Section className="relative overflow-hidden justify-center min-h-dvh mt-[-64.8px] border-b border-(--border)">
@@ -30,21 +39,18 @@ export default function Home() {
                   <div className="absolute top-1 left-1 w-2 h-2 rounded-full bg-green-500"></div>
                 </div>
                 <span className="text-xs md:text-sm text-fg-muted">
-                  Looking for new experiences
+                  {t("hero.status")}
                 </span>
               </div>
               <h1 className="mb-4 font-heading font-black text-5xl md:text-6xl leading-15 md:leading-18">
                 Erik Štvrtecký
               </h1>
-              <p className="mb-6 text-fg-muted">
-                I&apos;m a computer science student based in Brno, with a
-                growing focus on web development and design.
-              </p>
+              <p className="mb-6 text-fg-muted">{t("hero.about")}</p>
               <div className="flex gap-2">
                 <Link
                   href="mailto:contact@estvrtecky.com"
                   className="px-4 py-2 rounded-lg font-mono font-medium text-btn bg-fg hover:bg-(--neutral-800) dark:hover:bg-(--neutral-200) transition">
-                  Get in touch
+                  {t("hero.cta")}
                 </Link>
               </div>
             </div>
@@ -56,7 +62,7 @@ export default function Home() {
               <div className="relative overflow-hidden col-span-2 aspect-square rounded-2xl bg-(--bg-light) hover:shadow transition duration-300">
                 <Image
                   src="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/me.jpg"
-                  alt="Picture of me"
+                  alt={t("hero.widgets.photo")}
                   fill
                 />
               </div>
@@ -74,10 +80,10 @@ export default function Home() {
                   <h3 className="font-heading text-sm">VUT FIT</h3>
                 </div>
                 <p className="grow font-heading font-medium">
-                  Computer science student
+                  {t("hero.widgets.role")}
                 </p>
                 <span className="font-mono text-xs text-center">
-                  2025 - Present
+                  2025 - {tCommon("present")}
                 </span>
               </div>
 
@@ -88,10 +94,10 @@ export default function Home() {
                 className="flex items-center justify-between col-span-3 px-4 py-3 border border-(--border) rounded-2xl bg-(--bg-light) hover:bg-(--bg) hover:shadow transtion duration-300">
                 <div>
                   <h3 className="grow mb-1 font-heading font-medium text-2xl">
-                    Resumé
+                    {t("hero.widgets.resume.title")}
                   </h3>
                   <p className="text-xs text-fg-muted">
-                    See and download my resumé.
+                    {t("hero.widgets.resume.description")}
                   </p>
                 </div>
                 <FaChevronRight
@@ -131,47 +137,40 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <h2 className="mb-8 font-heading font-bold text-4xl">My Experience</h2>
+        <h2 className="mb-8 font-heading font-bold text-4xl">
+          {t("experience.title")}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-7xl">
           <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
             <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
-              Frontend Engineering
+              {t("experience.frontendEngineering.title")}
             </h3>
             <p className="text-fg-muted text-sm">
-              I have experience creating simple websites and with UX/UI design.
-              I am currently working on a personal website to showcase my
-              projects.
+              {t("experience.frontendEngineering.description")}
             </p>
           </Card>
           <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
             <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
-              Graphic Design
+              {t("experience.graphicDesign.title")}
             </h3>
             <p className="text-fg-muted text-sm">
-              As a member of a youth organization, I was responsible for
-              creating social media posts and preparing graphic materials for
-              events. I also designed a logo for them.
+              {t("experience.graphicDesign.description")}
             </p>
           </Card>
           <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
             <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
-              Aspiring Developer
+              {t("experience.aspiringDeveloper.title")}
             </h3>
             <p className="text-fg-muted text-sm">
-              I enjoy exploring various areas of computer science, from Python
-              scripting and automation to artificial intelligence. I like
-              learning by experimenting and working on different projects to
-              understand how things actually work.
+              {t("experience.aspiringDeveloper.description")}
             </p>
           </Card>
           <Card className="px-6 py-5 hover:shadow dark:shadow-neutral-800 transition duration-300">
             <h3 className="mb-2 font-heading font-bold text-xl text-green-600 dark:text-green-500">
-              Teamwork
+              {t("experience.teamwork.title")}
             </h3>
             <p className="text-fg-muted text-sm">
-              I frequently collaborate with classmates on various team projects
-              at school. I have experience collaborating on GitHub and have also
-              tried Jira.
+              {t("experience.teamwork.description")}
             </p>
           </Card>
         </div>
@@ -179,7 +178,7 @@ export default function Home() {
       <Section>
         <Card className="px-6 py-8 hover:shadow dark:shadow-neutral-800 transition duration-300">
           <h2 className="mb-8 font-heading font-bold text-4xl">
-            Education & Skills
+            {t("education.title")}
           </h2>
           <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-16">
             <ul>
@@ -190,11 +189,15 @@ export default function Home() {
                 </div>
                 <div className="py-3">
                   <h3 className="mb-1 font-heading font-medium text-xl">
-                    Brno University of Technology
+                    {t("education.schools.university.title")}
                   </h3>
                   <div className="divide-x divide-(--border) text-xs text-fg-muted">
-                    <span className="pr-2">Computer Science</span>
-                    <span className="pl-2 font-mono">2025 - Present</span>
+                    <span className="pr-2">
+                      {t("education.schools.university.fieldOfStudy")}
+                    </span>
+                    <span className="pl-2 font-mono">
+                      2025 - {tCommon("present")}
+                    </span>
                   </div>
                 </div>
               </li>
@@ -205,11 +208,11 @@ export default function Home() {
                 </div>
                 <div className="py-3">
                   <h3 className="mb-1 font-heading font-medium text-xl">
-                    SPŠE Zochova
+                    {t("education.schools.highschool.title")}
                   </h3>
                   <div className="divide-x divide-(--border) text-xs text-fg-muted">
                     <span className="pr-2">
-                      Programming of Digital Technologies
+                      {t("education.schools.highschool.fieldOfStudy")}
                     </span>
                     <span className="pl-2 font-mono">2021 - 2025</span>
                   </div>
@@ -218,7 +221,7 @@ export default function Home() {
             </ul>
             <div className="mr-6">
               <h3 className="my-3 font-heading font-medium text-xl">
-                Programming languages
+                {t("education.skills.programmingLanguages")}
               </h3>
               <div className="flex gap-2 flex-wrap">
                 <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
@@ -238,7 +241,7 @@ export default function Home() {
                 </span>
               </div>
               <h3 className="my-3 font-heading font-medium text-xl">
-                Web frameworks
+                {t("education.skills.webFrameworks")}
               </h3>
               <div className="flex gap-2 flex-wrap">
                 <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
@@ -251,7 +254,9 @@ export default function Home() {
                   Tailwind
                 </span>
               </div>
-              <h3 className="my-3 font-heading font-medium text-xl">Design</h3>
+              <h3 className="my-3 font-heading font-medium text-xl">
+                {t("education.skills.design")}
+              </h3>
               <div className="flex gap-2 flex-wrap">
                 <span className="px-2 py-1 border border-green-500 dark:border-green-800 rounded-full font-mono text-xs text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-950">
                   Figma

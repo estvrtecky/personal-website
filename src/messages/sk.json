@@ -1,0 +1,63 @@
+{
+  "common": {
+    "present": "Súčasnosť",
+    "navbar": {
+      "cta": "Kontaktovať"
+    },
+    "footer": {
+      "signature": "Navrhnuté a vytvorené s láskou."
+    }
+  },
+  "home": {
+    "hero": {
+      "status": "Hľadám nové skúsenosti",
+      "about": "Som študent informatiky v Brne a čoraz viac sa zameriavam na vývoj a dizajn webových stránok.",
+      "cta": "Kontaktovať",
+      "widgets": {
+        "photo": "Fotka mňa",
+        "role": "Študent informatiky",
+        "resume": {
+          "title": "Životopis",
+          "description": "Stiahnite si môj životopis."
+        }
+      }
+    },
+    "experience": {
+      "title": "Moje skúsenosti",
+      "frontendEngineering": {
+        "title": "Vývoj frontend-u",
+        "description": "Mám skúsenosti s tvorbou jednoduchých webových stránok a s UX/UI dizajnom. Momentálne pracujem na osobnej webovej stránke, na ktorej chcem prezentovať svoje projekty."
+      },
+      "graphicDesign": {
+        "title": "Grafický dizajn",
+        "description": "Ako člen mládežníckej organizácie som mal na starosti tvorbu príspevkov na sociálne siete a prípravu grafických podkladov na podujatia. Navrhol som pre nich aj logo."
+      },
+      "aspiringDeveloper": {
+        "title": "Nádejný vývojár",
+        "description": "Baví ma objavovať rôzne oblasti informatiky, od písania skriptov v Pythone a automatizácie až po umelú inteligenciu. Rád sa učím experimentovaním a prácou na rôznych projektoch, aby som pochopil, ako veci v skutočnosti fungujú."
+      },
+      "teamwork": {
+        "title": "Tímová práca",
+        "description": "Často spolupracujem so spolužiakmi na rôznych tímových projektoch v škole. Mám skúsenosti so spoluprácou na platforme GitHub a vyskúšal som aj nástroj Jira."
+      }
+    },
+    "education": {
+      "title": "Vzdelanie a zručnosti",
+      "schools": {
+        "university": {
+          "title": "Vysoké učení technické v Brně",
+          "fieldOfStudy": "Informatika"
+        },
+        "highschool": {
+          "title": "SPŠE Zochova",
+          "fieldOfStudy": "Programovanie digitálnych technológií"
+        }
+      },
+      "skills": {
+        "programmingLanguages": "Programovacie jazyky",
+        "webFrameworks": "Webové technológie",
+        "design": "Dizajn"
+      }
+    }
+  }
+}

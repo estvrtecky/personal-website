@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations("common.navbar");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function Navbar() {
           <Link
             href="mailto:contact@estvrtecky.com"
             className="px-3 py-2 rounded-lg font-mono font-medium text-xs text-btn bg-fg hover:bg-(--neutral-800) dark:hover:bg-(--neutral-200) transition">
-            Get in touch
+            {t("cta")}
           </Link>
         </div>
       </nav>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   FaGithub,
   FaInstagram,
@@ -6,7 +7,11 @@ import {
   FaRegEnvelopeOpen,
 } from "react-icons/fa6";
 
+import LanguageSwitch from "@/components/common/LanguageSwitch";
+
 export default function Footer() {
+  const t = useTranslations("common.footer");
+
   // Copyright year
   const startYear = 2026;
   const currentYear = new Date().getFullYear();
@@ -14,15 +19,15 @@ export default function Footer() {
     startYear === currentYear ? startYear : `${startYear} - ${currentYear}`;
 
   return (
-    <footer className="p-4 md:px-8 py-12 border-t border-(--border) bg-(--bg)">
+    <footer className="p-4 md:px-8 pt-10 pb-12 border-t border-(--border) bg-(--bg)">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 sm:mb-4 text-fg-muted">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-4 text-fg-muted">
           <Link
             href="/"
-            className="font-mono text-green-600 dark:text-green-500">
+            className="mb-4 sm:mb-0 font-mono text-green-600 dark:text-green-500">
             estvrtecky
           </Link>
-          <div className="flex gap-4 text-xl">
+          <div className="flex gap-4 mb-5 sm:mb-0 text-xl">
             <Link
               href="https://www.github.com/estvrtecky"
               target="_blank">
@@ -54,10 +59,11 @@ export default function Footer() {
               />
             </Link>
           </div>
+          <LanguageSwitch />
         </div>
         <div className="flex flex-col sm:flex-row justify-between gap-1 pt-6 sm:pt-4 border-t border-(--border) font-mono text-xs text-center text-fg-muted">
           <p>&copy; {displayYear} Erik Štvrtecký</p>
-          <p>Designed and built with love.</p>
+          <p>{t("signature")}</p>
         </div>
       </div>
     </footer>
