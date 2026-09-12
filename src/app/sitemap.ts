@@ -17,21 +17,22 @@ function getAlternates(
   };
 }
 
+function getPathnameUrls(
+  pathname: string,
+  freq?: MetadataRoute.Sitemap[number]["changeFrequency"],
+  priority?: MetadataRoute.Sitemap[number]["priority"],
+): MetadataRoute.Sitemap {
+  return routing.locales.map((l) => {
+    return {
+      url: HOST + getPathname({ href: pathname, locale: l }),
+      lastModified: new Date(),
+      changeFrequency: freq,
+      priority,
+      alternates: getAlternates(pathname),
+    };
+  });
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://www.estvrtecky.com/",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-      alternates: getAlternates("/"),
-    },
-    {
-      url: "https://www.estvrtecky.com/sk",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-      alternates: getAlternates("/"),
-    },
-  ];
+  return [getPathnameUrls("/", "weekly", 1)].flat();
 }
