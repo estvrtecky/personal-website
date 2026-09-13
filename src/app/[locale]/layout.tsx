@@ -2,6 +2,7 @@ import "../globals.css";
 
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
+import { Analytics } from "@vercel/analytics/next";
 
 import { geistMono, inter, satoshi } from "@/app/fonts/fonts";
 import Navbar from "@/components/common/Navbar";
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
           {children}
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
