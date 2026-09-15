@@ -22,6 +22,22 @@
         }
       }
     },
+    "projects": {
+      "comingSoon": "Coming soon...",
+      "status": {
+        "done": "Actively maintained",
+        "inProgress": "Work in progress"
+      },
+      "personalWebsite": {
+        "name": "Personal website",
+        "description": "Website about me and my work.",
+        "imageAlt": "Screenshot of personal website"
+      },
+      "logerr": {
+        "name": "LogErr",
+        "description": "Monitoring tool with dashboard."
+      }
+    },
     "experience": {
       "title": "My Experience",
       "frontendEngineering": {
