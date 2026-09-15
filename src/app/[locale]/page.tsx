@@ -8,6 +8,12 @@ import {
   FaLinkedin,
   FaRegEnvelopeOpen,
 } from "react-icons/fa6";
+import {
+  TbBrandNextjs,
+  TbBrandReact,
+  TbBrandSupabase,
+  TbBrandTypescript,
+} from "react-icons/tb";
 
 import { routing } from "@/i18n/routing";
 import Section from "@/components/ui/Section";
@@ -134,6 +140,116 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+      <Section>
+        <h2 className="mb-8 font-heading font-bold text-4xl">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
+          <Card>
+            <div className="flex items-center justify-between">
+              <div
+                className="flex gap-1 px-4 py-3.5 border-b border-(--border)"
+                aria-hidden>
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+              </div>
+              <span className="mr-4 font-mono text-xs text-fg-muted">
+                estvrtecky.com
+              </span>
+            </div>
+            <div className="relative overflow-hidden flex items-center justify-center aspect-video border-y border-(--border) font-mono text-fg-muted">
+              <Image
+                src="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/personal-website.png"
+                alt="Screenshot of personal website"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="px-4 py-3">
+              <h3 className="mb-1 font-heading font-semibold text-xl">
+                Personal website
+              </h3>
+              <p className="mb-4 text-fg-muted">
+                Website about me and my work.
+              </p>
+              <div className="flex items-center justify-between pt-3 border-t border-(--border)">
+                <div className="inline-flex items-center">
+                  <div className="relative w-4 h-4 mr-1.5">
+                    <div className="absolute w-4 h-4 rounded-full bg-green-500/25 animate-pulse"></div>
+                    <div className="absolute top-1 left-1 w-2 h-2 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="font-mono text-xs text-green-500">
+                    Actively maintained
+                  </span>
+                </div>
+                <div className="flex">
+                  <div className="flex items-center justify-center p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandTypescript />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandNextjs />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandReact />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandSupabase />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card>
+            <div className="flex items-center justify-between">
+              <div
+                className="flex gap-1 px-4 py-3.5 border-b border-(--border)"
+                aria-hidden>
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+              </div>
+              <span className="mr-4 font-mono text-xs text-fg-muted">
+                logerr.equitex.dev
+              </span>
+            </div>
+            <div className="flex items-center justify-center aspect-video border-y border-(--border) font-mono text-fg-muted">
+              Coming soon...
+            </div>
+            <div className="px-4 py-3">
+              <h3 className="mb-1 font-heading font-semibold text-xl">
+                LogErr
+              </h3>
+              <p className="mb-4 text-fg-muted">
+                Monitoring tool with dashboard.
+              </p>
+              <div className="flex items-center justify-between pt-3 border-t border-(--border)">
+                <div className="inline-flex items-center">
+                  <div className="relative w-4 h-4 mr-1.5">
+                    <div className="absolute w-4 h-4 rounded-full bg-amber-500/25 animate-pulse"></div>
+                    <div className="absolute top-1 left-1 w-2 h-2 rounded-full bg-amber-500"></div>
+                  </div>
+                  <span className="font-mono text-xs text-amber-500">
+                    Work in progress
+                  </span>
+                </div>
+                <div className="flex">
+                  <div className="flex items-center justify-center p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandTypescript />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandNextjs />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandReact />
+                  </div>
+                  <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                    <TbBrandSupabase />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </Section>
       <Section>
