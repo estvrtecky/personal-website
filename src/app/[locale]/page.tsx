@@ -147,12 +147,14 @@ export default function Home() {
             imageUrl="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/personal-website.png"
             imageAlt={t("projects.personalWebsite.imageAlt")}
             link="estvrtecky.com"
+            skills={["ts", "next", "react"]}
           />
           <ProjectCard
             name={t("projects.logerr.name")}
             description={t("projects.logerr.description")}
             status="in progress"
             link="logerr.equitex.com"
+            skills={["ts", "next", "react", "supa"]}
           />
         </div>
       </Section>

@@ -9,6 +9,8 @@ import {
 
 import Card from "@/components/ui/Card";
 
+type Skill = "ts" | "next" | "supa" | "react";
+
 export default function ProjectCard({
   name,
   description,
@@ -16,6 +18,7 @@ export default function ProjectCard({
   imageUrl,
   imageAlt,
   link,
+  skills,
 }: {
   name: string;
   description: string;
@@ -23,6 +26,7 @@ export default function ProjectCard({
   imageUrl?: string;
   imageAlt?: string;
   link?: string;
+  skills?: Skill[];
 }) {
   const t = useTranslations("home.projects");
   const statusText =
@@ -56,8 +60,8 @@ export default function ProjectCard({
       <div className="px-4 py-3">
         <h3 className="mb-1 font-heading font-semibold text-xl">{name}</h3>
         <p className="mb-4 text-fg-muted">{description}</p>
-        <div className="flex items-center justify-between pt-3 border-t border-(--border)">
-          <div className="inline-flex items-center">
+        <div className="flex items-center justify-between pt-2.5 border-t border-(--border)">
+          <div className="inline-flex items-center py-2.5">
             <div className="relative w-4 h-4 mr-1.5">
               <div
                 className={`absolute w-4 h-4 rounded-full ${status === "done" ? "bg-green-500/25" : "bg-amber-500/25"} animate-pulse`}></div>
@@ -69,20 +73,20 @@ export default function ProjectCard({
               {statusText}
             </span>
           </div>
-          <div className="flex">
-            <div className="flex items-center justify-center p-2 border border-(--border) rounded-full bg-bg">
-              <TbBrandTypescript />
+          {skills && (
+            <div className="flex">
+              {skills.map((skill) => (
+                <div
+                  key={skill}
+                  className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
+                  {skill === "ts" && <TbBrandTypescript />}
+                  {skill === "next" && <TbBrandNextjs />}
+                  {skill === "react" && <TbBrandReact />}
+                  {skill === "supa" && <TbBrandSupabase />}
+                </div>
+              ))}
             </div>
-            <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
-              <TbBrandNextjs />
-            </div>
-            <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
-              <TbBrandReact />
-            </div>
-            <div className="flex items-center justify-center -ml-2 p-2 border border-(--border) rounded-full bg-bg">
-              <TbBrandSupabase />
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </Card>
