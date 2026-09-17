@@ -22,6 +22,22 @@
         }
       }
     },
+    "projects": {
+      "comingSoon": "Už čoskoro...",
+      "status": {
+        "done": "Aktívne udržiavané",
+        "inProgress": "Pracuje sa na tom"
+      },
+      "personalWebsite": {
+        "name": "Osobná stránka",
+        "description": "Stránka o mne a mojej práci.",
+        "imageAlt": "Snímka osobnej stránky"
+      },
+      "logerr": {
+        "name": "LogErr",
+        "description": "Monitorovací nástroj s ovládacím panelom."
+      }
+    },
     "experience": {
       "title": "Moje skúsenosti",
       "frontendEngineering": {

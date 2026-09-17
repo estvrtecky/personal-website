@@ -12,6 +12,7 @@ import {
 import { routing } from "@/i18n/routing";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
+import ProjectCard from "@/components/project/ProjectCard";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -134,6 +135,27 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+      <Section>
+        <h2 className="mb-8 font-heading font-bold text-4xl">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
+          <ProjectCard
+            name={t("projects.personalWebsite.name")}
+            description={t("projects.personalWebsite.description")}
+            status="done"
+            imageUrl="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/personal-website.png"
+            imageAlt={t("projects.personalWebsite.imageAlt")}
+            link="estvrtecky.com"
+            skills={["ts", "next", "react"]}
+          />
+          <ProjectCard
+            name={t("projects.logerr.name")}
+            description={t("projects.logerr.description")}
+            status="in progress"
+            link="logerr.equitex.com"
+            skills={["ts", "next", "react", "supa"]}
+          />
         </div>
       </Section>
       <Section>
