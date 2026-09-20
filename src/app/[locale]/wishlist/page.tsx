@@ -10,6 +10,8 @@ import { wishSchema } from "@/schemas/wish";
 import Card from "@/components/ui/Card";
 import Section from "@/components/ui/Section";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("wishlist");
 
