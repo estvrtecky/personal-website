@@ -5,8 +5,13 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Analytics } from "@vercel/analytics/next";
 
 import { geistMono, inter, satoshi } from "@/app/fonts/fonts";
+import { routing } from "@/i18n/routing";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: {

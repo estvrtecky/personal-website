@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { FaArrowUpRightFromSquare, FaHeartCircleXmark } from "react-icons/fa6";
 
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/client";
 import { wishSchema } from "@/schemas/wish";
 
 import Card from "@/components/ui/Card";
@@ -23,7 +23,7 @@ export default async function Page() {
   const locale = await getLocale();
   const t = await getTranslations("wishlist");
 
-  const supabase = await createClient();
+  const supabase = createClient();
   const { data, error } = await supabase
     .from("wishlist")
     .select("*, translations:wishlist_translations(*)");
