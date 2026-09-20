@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
@@ -8,6 +9,15 @@ import { wishSchema } from "@/schemas/wish";
 
 import Card from "@/components/ui/Card";
 import Section from "@/components/ui/Section";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("wishlist");
+
+  return {
+    title: t("title"),
+    robots: "noindex, nofollow",
+  };
+}
 
 export default async function Page() {
   const locale = await getLocale();
