@@ -60,6 +60,7 @@ export default function Home() {
                   src="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/me.jpg"
                   alt={t("hero.widgets.photo")}
                   fill
+                  sizes="188px"
                 />
               </div>
 
@@ -71,6 +72,7 @@ export default function Home() {
                       src="https://stugrezwwrkmaoeikjsm.supabase.co/storage/v1/object/public/assets/vut.png"
                       alt="VUT Logo"
                       fill
+                      sizes="24px"
                     />
                   </div>
                   <h3 className="font-heading text-sm">VUT FIT</h3>
