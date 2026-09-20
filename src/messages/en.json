@@ -75,5 +75,14 @@
         "design": "Design"
       }
     }
+  },
+  "wishlist": {
+    "title": "My wishlist",
+    "description": "Not sure what to get me? I'd be really happy if you bought something from my wishlist.",
+    "empty": {
+      "title": "No wishes",
+      "description": "I have no wishes right now."
+    },
+    "link": "Where to buy"
   }
 }

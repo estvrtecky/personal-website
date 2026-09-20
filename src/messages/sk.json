@@ -75,5 +75,14 @@
         "design": "Dizajn"
       }
     }
+  },
+  "wishlist": {
+    "title": "Môj zoznam prianí",
+    "description": "Neviete čím ma chcete potešiť? Budem veľmi rád, ak mi kúpite niečo z môjho zoznamu prianí.",
+    "empty": {
+      "title": "Žiadne priania",
+      "description": "Momentálne nemám žiadne priania."
+    },
+    "link": "Kde kúpiť"
   }
 }
