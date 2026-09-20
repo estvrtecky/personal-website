@@ -23,6 +23,7 @@
       }
     },
     "projects": {
+      "title": "Projects",
       "comingSoon": "Coming soon...",
       "status": {
         "done": "Actively maintained",

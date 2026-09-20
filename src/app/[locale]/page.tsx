@@ -133,7 +133,9 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <h2 className="mb-8 font-heading font-bold text-4xl">Projects</h2>
+        <h2 className="mb-8 font-heading font-bold text-4xl">
+          {t("projects.title")}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
           <ProjectCard
             name={t("projects.personalWebsite.name")}
