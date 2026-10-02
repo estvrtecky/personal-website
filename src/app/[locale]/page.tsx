@@ -61,6 +61,8 @@ export default function Home() {
                   alt={t("hero.widgets.photo")}
                   fill
                   sizes="188px"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
 
